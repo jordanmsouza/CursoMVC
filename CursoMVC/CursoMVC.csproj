@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Categorias\**" />
+    <Compile Remove="Views\Produtos\**" />
+    <Content Remove="Views\Categorias\**" />
+    <Content Remove="Views\Produtos\**" />
+    <EmbeddedResource Remove="Views\Categorias\**" />
+    <EmbeddedResource Remove="Views\Produtos\**" />
+    <None Remove="Views\Categorias\**" />
+    <None Remove="Views\Produtos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
+  </ItemGroup>
+
+</Project>
